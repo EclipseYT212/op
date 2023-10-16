@@ -1,9 +1,4 @@
---// Destroy other instances
-for _,v in pairs(game.CoreGui:GetChildren()) do
-    if v.Name == "dark_UI" then
-        v:Destroy()
-    end
-end
+
 
 local dark_UI = Instance.new("ScreenGui")
 dark_UI.Name = "dark_UI"
