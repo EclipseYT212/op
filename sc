@@ -2,17 +2,17 @@ local Robberys = {
 	['1'] = 'bank',
 	['2'] = 'Jewelrys',
 	['3'] = 'Museum',
-	['4'] = 'Power Plant',
+	['4'] = 'PowerPlant',
 	['5'] = 'Passenger Train',
 	['6'] = 'Cargo Train',
-	['7'] = 'Cargo Ship',
-	['8'] = 'Cargo Plane',
-	['9'] = 'Gas Station',
-	['10'] = 'Donut Store',
-	['11'] = 'Money Truck',
-	['12'] = 'Home Vault',
+	['7'] = 'CargoShip',
+	['8'] = 'CargoPlane',
+	['9'] = 'GasStations',
+	['10'] = 'DonutShop',
+	['11'] = 'MoneyTruck',
+	['12'] = 'HomeVault',
 	['13'] = 'Tomb',
-	['14'] = 'casino',
+	['14'] = 'Casino',
 	['15'] = 'Mansion'
 }
 function get_rob(nome)
@@ -33,6 +33,6 @@ function is_opened(rob)
 end
 
 
-if is_opened("Jewelrys") == "Open" or is_opened("Jewelrys") == "Closed" then
-	print(is_opened("Jewelrys"))
+if is_opened("GasStations") == "Open" or is_opened("GasStations") == "Closed" then
+	print(is_opened("GasStations"))
 end
