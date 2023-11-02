@@ -57,4 +57,4 @@ if BankState == nil then
 end
 
 -- Print the status of the Bank robbery.
-print(is_opened('Bank'))
+print(is_opened('Mansion'))
