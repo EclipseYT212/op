@@ -7,7 +7,7 @@ local Robberys = {
 	['6'] = 'Cargo Train',
 	['7'] = 'CargoShip',
 	['8'] = 'CargoPlane',
-	['9'] = 'RetroGasStation',
+	['9'] = 'GasStations',
 	['10'] = 'DonutShop',
 	['11'] = 'MoneyTruck',
 	['12'] = 'HomeVault',
@@ -33,6 +33,6 @@ function is_opened(rob)
 end
 
 
-if is_opened("RetroGasStation") == "Open" or is_opened("RetroGasStation") == "Closed" then
-	print(is_opened("RetroGasStation"))
+if is_opened("GasStations") == "Open" or is_opened("GasStations") == "Closed" then
+	print(is_opened("GasStations"))
 end
