@@ -33,6 +33,6 @@ function is_opened(rob)
 end
 
 
-if is_opened("mansion") == "Open" or is_opened("mansion") == "Closed" then
-	print(is_opened("mansion"))
+if is_opened("Jewelry Store") == "Open" or is_opened("Jewelry Store") == "Closed" then
+	print(is_opened("Jewelry Store"))
 end
