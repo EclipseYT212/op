@@ -37,6 +37,6 @@ end
 
 
 
-if is_opened("Bank") == "aberto" or is_opened("Bank") == "roubando" then
-	print("Test")
+if is_opened("bank") == "aberto" or is_opened("bank") == "fechado" then
+	--auto farm (ON)
 end
