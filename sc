@@ -37,6 +37,6 @@ end
 
 
 
-if main.is_opened("bank") == "aberto" or main.is_opened("bank") == "roubando" then
+if main.is_opened("Bank") == "aberto" or main.is_opened("Bank") == "roubando" then
 	--auto farm (ON)
 end
