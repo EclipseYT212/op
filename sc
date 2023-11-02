@@ -1,7 +1,5 @@
-
-
 local Robberys = {
-	['1'] = 'Bank',
+	['1'] = 'bank',
 	['2'] = 'Jewelry Store',
 	['3'] = 'Museum',
 	['4'] = 'Power Plant',
@@ -35,8 +33,6 @@ function is_opened(rob)
 end
 
 
-
-
-if is_opened("Mansion") == "aberto" or is_opened("Mansion") == "fechado" then
-	print("Test")
+if is_opened("bank") == "aberto" or is_opened("bank") == "fechado" then
+	print(is_opened("bank"))
 end
