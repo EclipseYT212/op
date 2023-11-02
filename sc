@@ -28,11 +28,11 @@ function is_opened(rob)
 
 	local State = game:GetService('ReplicatedStorage').RobberyState:FindFirstChild(roubo)
 
-	return (tostring(State) == 'nil' and 'fechado') or
-		((State.Value == 1 and 'aberto') or (State.Value == 2 and 'roubando') or (State.Value == 3 and 'fechado'))
+	return (tostring(State) == 'nil' and 'Closed') or
+		((State.Value == 1 and 'Open') or (State.Value == 2 and 'stealing') or (State.Value == 3 and 'fechado'))
 end
 
 
-if is_opened("bank") == "aberto" or is_opened("bank") == "fechado" then
-	print(is_opened("bank"))
+if is_opened("Casino") == "Open" or is_opened("Casino") == "Closed" then
+	print(is_opened("Casino"))
 end
