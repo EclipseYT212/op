@@ -29,13 +29,13 @@ function is_opened(rob)
 
 	-- Check if the RobberyState folder exists in the ReplicatedStorage service.
 	local RobberyState = game:GetService('ReplicatedStorage').RobberyState
-	if RobberyState is nil then
+	if RobberyState == nil then
 		return 'closed'
 	end
 
 	-- Check if the RobberyState folder contains the necessary data.
 	local State = RobberyState:FindFirstChild(theft)
-	if State is nil then
+	if State == nil then
 		return 'closed'
 	end
 
@@ -45,13 +45,13 @@ end
 
 -- Make sure that the RobberyState folder exists in the ReplicatedStorage service.
 local RobberyState = game:GetService('ReplicatedStorage').RobberyState
-if RobberyState is nil then
+if RobberyState == nil then
 	RobberyState = game:GetService('ReplicatedStorage').RobberyState:CreateFolder()
 end
 
 -- Add the necessary data to the RobberyState folder.
 local BankState = RobberyState:FindFirstChild('1')
-if BankState is nil then
+if BankState == nil then
 	BankState = RobberyState:CreateChild('1')
 	BankState.Value = 'closed'
 end
