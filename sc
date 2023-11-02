@@ -25,7 +25,7 @@ function get_rob(nome)
 	end
 end
 
-function main.is_opened(rob)
+function is_opened(rob)
 	local roubo = get_rob(rob)
 
 	local State = game:GetService('ReplicatedStorage').RobberyState:FindFirstChild(roubo)
@@ -37,6 +37,6 @@ end
 
 
 
-if main.is_opened("Bank") == "aberto" or main.is_opened("Bank") == "roubando" then
+if is_opened("bank") == "aberto" or is_opened("bank") == "roubando" then
 	--auto farm (ON)
 end
