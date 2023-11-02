@@ -37,6 +37,6 @@ end
 
 
 
-if is_opened("Bank") == "open" or is_opened("Bank") == "closed" then
+if is_opened("Bank") == "open" or is_opened("Bank") == "stealing" then
 	print("Test")
 end
