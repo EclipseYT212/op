@@ -29,7 +29,7 @@ function is_opened(rob)
 	local State = game:GetService('ReplicatedStorage').RobberyState:FindFirstChild(roubo)
 
 	return (tostring(State) == 'nil' and 'Closed') or
-		((State.Value == 1 and 'Open') or (State.Value == 2 and 'stealing') or (State.Value == 3 and 'fechado'))
+		((State.Value == 1 and 'Open') or (State.Value == 2 and 'stealing') or (State.Value == 3 and 'Closed'))
 end
 
 
