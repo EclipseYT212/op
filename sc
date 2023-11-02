@@ -33,3 +33,11 @@
             return (tostring(State) == 'nil' and 'fechado') or
                 ((State.Value == 1 and 'aberto') or (State.Value == 2 and 'roubando') or (State.Value == 3 and 'fechado'))
         end```
+
+
+
+```lua
+if main.is_opened("bank") == "aberto" or main.is_opened("bank") == "roubando" then
+--auto farm (ON)
+end
+```
