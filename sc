@@ -1,5 +1,3 @@
- is_opened()
-
 local Robberys = {
 	['1'] = 'Bank',
 	['2'] = 'Jewelry Store',
@@ -17,6 +15,7 @@ local Robberys = {
 	['14'] = 'Casino',
 	['15'] = 'Mansion'
 }
+
 function get_rob(name)
 	for i, v in pairs(Robberys) do
 		if v:lower() == name:lower() then
@@ -28,15 +27,34 @@ end
 function is_opened(rob)
 	local theft = get_rob(rob)
 
-	local State = game:GetService('ReplicatedStorage').RobberyState:FindFirstChild(theft)
+	-- Check if the RobberyState folder exists in the ReplicatedStorage service.
+	local RobberyState = game:GetService('ReplicatedStorage').RobberyState
+	if RobberyState is nil then
+		return 'closed'
+	end
+
+	-- Check if the RobberyState folder contains the necessary data.
+	local State = RobberyState:FindFirstChild(theft)
+	if State is nil then
+		return 'closed'
+	end
 
 	return (tostring(State) == 'nil' and 'closed') or
 		((State.Value == 1 and 'open') or (State.Value == 2 and 'stealing') or (State.Value == 3 and 'closed'))
 end
 
-
-
-
-if is_opened("Bank") == "open" or is_opened("Bank") == "stealing" then
-	print("Test")
+-- Make sure that the RobberyState folder exists in the ReplicatedStorage service.
+local RobberyState = game:GetService('ReplicatedStorage').RobberyState
+if RobberyState is nil then
+	RobberyState = game:GetService('ReplicatedStorage').RobberyState:CreateFolder()
 end
+
+-- Add the necessary data to the RobberyState folder.
+local BankState = RobberyState:FindFirstChild('1')
+if BankState is nil then
+	BankState = RobberyState:CreateChild('1')
+	BankState.Value = 'closed'
+end
+
+-- Print the status of the Bank robbery.
+print(is_opened('Bank'))
