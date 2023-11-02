@@ -50,10 +50,10 @@ if RobberyState == nil then
 end
 
 -- Add the necessary data to the RobberyState folder.
-local BankState = RobberyState:FindFirstChild('1')
-if BankState == nil then
-	BankState = RobberyState:CreateChild('1')
-	BankState.Value = 'closed'
+local MansionState = RobberyState:FindFirstChild('1')
+if MansionState == nil then
+	MansionState = RobberyState:CreateChild('1')
+	MansionState.Value = 'closed'
 end
 
 -- Print the status of the Bank robbery.
