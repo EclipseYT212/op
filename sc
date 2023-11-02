@@ -1,4 +1,4 @@
-
+ is_opened()
 
 local Robberys = {
 	['1'] = 'Bank',
