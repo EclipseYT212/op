@@ -12,7 +12,7 @@ local Robberys = {
 	['11'] = 'Money Truck',
 	['12'] = 'Home Vault',
 	['13'] = 'Tomb',
-	['14'] = 'Casino',
+	['14'] = 'casino',
 	['15'] = 'Mansion'
 }
 function get_rob(nome)
@@ -33,6 +33,6 @@ function is_opened(rob)
 end
 
 
-if is_opened("Casino") == "Open" or is_opened("Casino") == "Closed" then
-	print(is_opened("Casino"))
+if is_opened("casino") == "Open" or is_opened("casino") == "Closed" then
+	print(is_opened("casino"))
 end
