@@ -17,26 +17,26 @@ local Robberys = {
 	['14'] = 'Casino',
 	['15'] = 'Mansion'
 }
-function get_rob(nome)
+function get_rob(name)
 	for i, v in pairs(Robberys) do
-		if v:lower() == nome:lower() then
+		if v:lower() == name:lower() then
 			return i
 		end
 	end
 end
 
 function is_opened(rob)
-	local roubo = get_rob(rob)
+	local theft = get_rob(rob)
 
-	local State = game:GetService('ReplicatedStorage').RobberyState:FindFirstChild(roubo)
+	local State = game:GetService('ReplicatedStorage').RobberyState:FindFirstChild(theft)
 
-	return (tostring(State) == 'nil' and 'fechado') or
-		((State.Value == 1 and 'aberto') or (State.Value == 2 and 'roubando') or (State.Value == 3 and 'fechado'))
+	return (tostring(State) == 'nil' and 'closed') or
+		((State.Value == 1 and 'open') or (State.Value == 2 and 'stealing') or (State.Value == 3 and 'closed'))
 end
 
 
 
 
-if is_opened("bank") == "aberto" or is_opened("bank") == "fechado" then
-	--auto farm (ON)
+if is_opened("bank") == "open" or is_opened("bank") == "closed" then
+	print("Test")
 end
